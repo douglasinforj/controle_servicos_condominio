@@ -1,0 +1,52 @@
+# Python #
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.swp
+*.swo
+
+# Virtualenv #
+venv/
+.env
+.envrc
+*.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Django #
+db.sqlite3
+/media/
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+instance/
+local_settings.py
+.env
+
+# Django migrations #
+*/migrations/*  
+!*/migrations/__init__.py
+
+# Static & Media files #
+staticfiles/
+static/
+media/
+*.bak
+
+# VS Code #
+.vscode/
+
+# IDEs e editores #
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# MacOS #
+.DS_Store
+
+# Docker #
+docker-compose.override.yml
