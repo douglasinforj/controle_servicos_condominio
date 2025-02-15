@@ -1,1 +1,1 @@
-# Sistema de Controle de Prestação de Serviços Condominio
+# Controle de Prestação de Serviços Condominio
