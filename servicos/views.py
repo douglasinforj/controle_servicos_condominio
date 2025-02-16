@@ -2,7 +2,7 @@ from rest_framework import viewsets
 from .models import Condomino, EmpresaParceira, SolicitacaoServico, Comentario
 from .serializers import CondominoSerializer, EmpresaParceiraSerializer, SolicitacaoServicoSerializer, ComentarioSerializer
 
-class CondôminoViewSet(viewsets.ModelViewSet):
+class CondominoViewSet(viewsets.ModelViewSet):
     queryset = Condomino.objects.all()
     serializer_class = CondominoSerializer
 
