@@ -1,5 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
+
+#Controle de acesso:
+
+from django.db.models.signals import post_migrate
+from django.dispatch import receiver
+
 
 class Condomino(models.Model):
     PROPRIETARIO = 'Proprietário'
@@ -72,3 +78,12 @@ class Comentario(models.Model):
 
     def __str__(self):
         return f"{self.usuario.username}: {self.comentario[:30]}"
+    
+
+#Criando Grupos para Controle de Acesso:
+@receiver(post_migrate)
+def criar_grupos(sender, **kwargs):
+    if sender.name == 'servicos':
+        Group.objects.get_or_create(name='Admin')
+        Group.objects.get_or_create(name='Morador')
+        Group.objects.get_or_create(name='EmpresaParceira')
