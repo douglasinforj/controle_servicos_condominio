@@ -12,7 +12,7 @@ class EmpresaParceiraSerializer(serializers.ModelSerializer):
         model = EmpresaParceira
         fields = '__all__'
 
-class SolicitacaoServico(serializers.ModelSerializer):
+class SolicitacaoServicoSerializer(serializers.ModelSerializer):
     class Meta:
         model = SolicitacaoServico
         fields = '__all__'
