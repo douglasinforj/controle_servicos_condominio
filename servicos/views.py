@@ -30,6 +30,8 @@ class IsEmpresaOrAdmin(permissions.BasePermission):
 
 #---------------------Views----API-------------------------
 
+#Views estão protegidas com permissão de grupos
+
 class CondominoViewSet(viewsets.ModelViewSet):
     queryset = Condomino.objects.all()
     serializer_class = CondominoSerializer
