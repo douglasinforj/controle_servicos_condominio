@@ -12,7 +12,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('servicos.urls')), 
 
-    path('api/auth', obtain_auth_token, name='api_token_auth'),
+    path('api/auth/', obtain_auth_token, name='api_token_auth'),
 ]
 
 if settings.DEBUG:
